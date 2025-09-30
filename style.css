@@ -1,72 +1,119 @@
- body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f7;
-      color: #333;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f7;
+  color: #333;
+}
 
-    /* Cabeçalho */
-    header {
-      background: #5e35b1;
-      color: #fff;
-      text-align: center;
-      padding: 25px 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+/* Cabeçalho */
+header {
+  background: #5e35b1;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-    .logo {
-      width: 100px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
 
-    /* Menu de navegação */
-    nav {
-      background: #4527a0;
-      text-align: center;
-      padding: 12px 0;
-    }
+/* Menu de navegação */
+nav {
+  background: #4527a0;
+  text-align: center;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* quebra em telas pequenas */
+}
 
-    nav a {
-      color: #fff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+nav a {
+  color: #fff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
 
-    nav a:hover {
-      color: #ffeb3b;
-    }
+nav a:hover {
+  color: #ffeb3b;
+}
 
-    /* Seções */
-    section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+/* Seções */
+section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    section h2 {
-      color: #5e35b1;
-      margin-bottom: 15px;
-    }
+section h2 {
+  color: #5e35b1;
+  margin-bottom: 15px;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #5e35b1;
-      color: white;
-      margin-top: 30px;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #5e35b1;
+  color: white;
+  margin-top: 30px;
+}
 
-    footer p {
-      margin: 0;
-      font-size: 14px;
-    }
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* menu em coluna no celular */
+    padding: 15px;
+  }
+
+  nav a {
+    margin: 8px 0;
+    display: block;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  p, li {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
